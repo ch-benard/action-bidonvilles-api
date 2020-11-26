@@ -2,11 +2,12 @@ const path = require('path');
 
 const config = {
     assetsSrc: path.resolve(__dirname, '../assets'),
-    frontUrl: 'http://localhost:1234',
-    port: 8080,
-    externalPort: 1236,
+    frontUrl: `${FRONT_HOST}:${FRONT_PORT}`,
+    port: ${API_CONTAINER_PORT},
+    apiHostname: '${API_HOSTNAME}',
+    apiExternalPort: ${API_EXTERNAL_PORT},
     auth: {
-        secret: 'secret used for generating authentication tokens',
+        secret: '${SECRET_FOR_TOKEN}',
         expiresIn: '168h', // 7 days
     },
     activationTokenExpiresIn: '48h',
@@ -16,6 +17,5 @@ const config = {
         privateKey: 'MAILJET_API_PRIVATE_KEY',
     },
 };
-config.backUrl = `http://localhost:${config.externalPort}`;
-
+config.backUrl = `${config.apiHostname}:${config.apiExternalPort}`;
 module.exports = config;

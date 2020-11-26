@@ -1,8 +1,8 @@
 module.exports = {
-    username: 'postgres',
-    password: 'resorption_bidonvilles',
-    database: 'resorption_bidonvilles',
-    host: 'database',
-    port: 5432,
-    dialect: 'postgres',
+    username: '${DB_USERNAME}',
+    password: '${DB_PASSWORD}',
+    database: '${DB_NAME}',
+    host: '${DB_HOST}',
+    port: ${DB_PORT},
+    dialect: '${DB_DIALECT}',
 };
