@@ -1,8 +1,9 @@
 .git*
 node_modules
 postgres-data
-docker-compose.yml
-Dockerfile
+docker-*
+Dockerfile*
 jsconfig.json
 README.md
 schema_*
+.dockerignore
